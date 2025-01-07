@@ -1,6 +1,6 @@
 FROM python:3.10-slim
+RUN pip install requests
 WORKDIR /app
 COPY client.py /app/client.py
-RUN pip install requests
 CMD ["python3", "/app/client.py"]
 

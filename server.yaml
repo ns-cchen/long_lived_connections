@@ -14,7 +14,9 @@ spec:
     spec:
       containers:
       - name: server
-        image: nscchen/long_lived_connections_server
+        image: server
+        imagePullPolicy: IfNotPresent
+        command: ["./server"]
         ports:
         - containerPort: 5000
         env:

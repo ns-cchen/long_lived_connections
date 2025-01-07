@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: nscchen/long_lived_connections_client
+        image: client
+        imagePullPolicy: IfNotPresent
         command: ["python3", "./client.py"]
 

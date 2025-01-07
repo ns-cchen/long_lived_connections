@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/api', methods=['GET'])
 def api():
-    delay = random.randint(20, 60)
+    delay = random.randint(1, 3)
     pod_id = os.getenv("POD_ID", "unknown")  # Use an environment variable to identify the Pod
     print(f"Pod {pod_id} will delay the response for {delay} seconds.")
     time.sleep(delay)
